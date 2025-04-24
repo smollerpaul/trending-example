@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-background-dark text-white font-sans antialiased;
+  min-height: 100vh;
+}
+
+.trend-card {
+  @apply bg-background-card rounded-xl overflow-hidden transition-all duration-200 border border-neutral-800;
+}
+
+.trend-card:hover {
+  @apply border-neutral-700 shadow-lg;
+  transform: translateY(-2px);
+}
+
+.chart-container {
+  @apply relative w-full h-40 mt-4;
+}
+
+.engagement-badge {
+  @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.premium-content-overlay {
+  @apply absolute inset-0 bg-gradient-to-b from-background-card/30 via-background-card/70 to-background-card flex flex-col items-center justify-end p-4;
+}
+
+.crypto-tag {
+  @apply inline-flex items-center mr-2 px-3 py-1 rounded-full text-xs font-medium;
+}
+
+.crypto-tag.btc {
+  @apply bg-orange-900/30 text-orange-400;
+}
+
+.crypto-tag.eth {
+  @apply bg-blue-900/30 text-blue-400;
+}
+
+.crypto-tag.usdt {
+  @apply bg-green-900/30 text-green-400;
+}
+
+.crypto-tag.xrp {
+  @apply bg-purple-900/30 text-purple-400;
+}
+
+.sentiment-indicator {
+  @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium;
+}
+
+.sentiment-positive {
+  @apply bg-success-dark/30 text-success-light;
+}
+
+.sentiment-negative {
+  @apply bg-danger-dark/30 text-danger-light;
+}
+
+.sentiment-neutral {
+  @apply bg-neutral-800/30 text-neutral-400;
+}
+
+.hottest-badge {
+  @apply bg-accent-dark text-white px-2 py-1 rounded-md text-xs font-semibold;
+}
+
+.early-trend-badge {
+  @apply bg-primary-dark/20 text-primary-light border border-primary-dark/30 px-2 py-0.5 rounded-md text-xs font-medium;
+}
+
+.score-container {
+  @apply flex items-center space-x-1 text-xs text-neutral-400;
+}
+
+.engagement-icon {
+  @apply w-4 h-4 text-neutral-500;
+}
+
+.news-container {
+  @apply bg-neutral-900/60;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background-dark;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-600;
+}
